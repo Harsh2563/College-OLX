@@ -22,11 +22,9 @@ const usermodel = new mongoose.Schema ({
     phone: {
         type: Number,
         unique:true,
-        required: true,
     },
     address: {
         type:String,
-        required:true,
     }
 },{timestamps:true})
 

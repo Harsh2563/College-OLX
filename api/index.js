@@ -13,7 +13,13 @@ app.use('/api/user/auth',authRouter);
 
 
 mongoose.connect(process.env.MONGO_STRING)
-.then(console.log("Database is connected"));
+.then(()=> {
+    console.log("Connected to database");
+}).catch((err)=> {
+    console.log(err);
+})
 
 
-app.listen(3000, console.log("Server is running"));
+app.listen(3000, ()=> {
+    console.log("Server is running")
+});

@@ -4,9 +4,9 @@ import User from '../Model/userModel.js';
 import jwt from 'jsonwebtoken';
 
 export const signUp = async(req,res,next)=> {
-    const {username,email,password,phone,address} = req.body; 
+    const {username,email,password} = req.body; 
     const hashedPassword = bcryptjs.hashSync(password,10);
-    const newUser = new User({username,email,password:hashedPassword,phone,address});
+    const newUser = new User({username,email,password:hashedPassword});
     try {
         await newUser.save();
         res.status(200).json("user registered successfully");
@@ -37,3 +37,4 @@ export const signIn = async(req,res,next)=> {
         next(error);
     }
 }
+
