@@ -9,12 +9,17 @@ export default function SignIn() {
 const [formData, setformData] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const handleChange = (e)=>  {
+    setformData({
+      ...formData,
+      [e.target.id]:e.target.value,
+    });
+    console.log(formData);
+  }
 const handleSubmit = async(e)=> {
   e.preventDefault();
-  setformData({
-    ...formData,
-    [e.target.id]:e.target.value,
-  });
+  
   try {
     dispatch(loginStart());
     const res = await fetch('/api/user/auth/signIn', {
@@ -46,7 +51,7 @@ const handleSubmit = async(e)=> {
           <img src="https://res.cloudinary.com/dge7dzxe0/image/upload/v1701972199/College%20OLX/Google_logo_b9hb2w.webp" alt="logo" id="logo" />
           <h1 className="welcomeHeading">Welcome Back!</h1>
           <h2 className="enterDetails">Please enter your details</h2>
-          <form action="" className="SignUpForm" onSubmit={handleSubmit}>
+          <form action="" className="SignUpForm" onSubmit={handleSubmit} onChange={handleChange}>
             <input type="email" className="SignUpEmail" id='email' placeholder="Email" />
             <input type="password" className="SignUpPassword" id='password' placeholder="Password" />
             <button className="SignUpButton" type="submit" onSubmit={handleSubmit}>Login</button>

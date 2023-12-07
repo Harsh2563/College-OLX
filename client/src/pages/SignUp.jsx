@@ -12,7 +12,7 @@ export default function SignUp() {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.id]: e.target.value,
     });
   };
 
@@ -53,14 +53,14 @@ export default function SignUp() {
               type="text"
               className="username"
               placeholder="Full Name"
-              name="username" 
+              id="username" 
               onChange={handleChange}
             />
             <input
               type="email"
               className="SignUpEmail"
               placeholder="Email"
-              name="email" 
+              id="email" 
               onChange={handleChange}
             />
             <input
