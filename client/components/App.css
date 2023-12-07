@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #1d1d1d;
+  padding: 10vh;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  box-sizing: border-box;
+  background-image: linear-gradient(rgb(69, 69, 248), rgb(20, 16, 253));
+  border-radius: 30px;
+  overflow: hidden;
+  height: 80vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Picture {
+  aspect-ratio: 1/1;
+  height: 80vh;
+}
+.loginPage {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+}
+#logo {
+  height: 20px;
+  margin: 20px;
+}
+.googleLogo {
+  height: 20px;
+  margin-right: 0.5rem;
+}
+.loginForm {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px;
+}
+.welcomeHeading {
+  font-size: 20px;
+}
+.enterDetails {
+  font-size: 15px;
+  font-weight: normal;
+}
+.loginForm input {
+  border-width: 0px 0px 1px 0px;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+}
+.loginForm button:hover {
+  cursor: pointer;
+}
+.loginButton {
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #ffffff;
+  border: none;
+  background-color: #1d1d1d;
+}
+.GoogleLogin {
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+}
+.signUpRedirect {
+  font-size: 15px;
+  font-weight: normal;
+  color: rgb(46, 46, 46);
+}
+.signUpBtn {
+  font-weight: bold;
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+.loginPage {
+  display: none;
+}
+.signUpPage {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+}
+.SignUpForm {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+}
+.SignUpForm input {
+  border-width: 0px 0px 1px 0px;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+}
+.SignUpForm button:hover {
+  cursor: pointer;
+}
+.SignUpButton {
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 10px;
+  color: #ffffff;
+  border: none;
+  background-color: #1d1d1d;
+}
+.GoogleSignUp {
+  border-radius: 15px;
+  border: none;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+  width:100%;
+}
+.LoginBtn {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: bold;
+}
+
+@media  screen and (max-width: 1100px) {
+    .Picture{
+        width: 500px;
+    }
+    .SignUpForm{
+        margin: 0px;
+    }
+    .SignUpForm input{
+        font-size: 10px;
+    }
+    .welcomeHeading{
+        font-size: 15px;
+    }
+    .enterDetails{
+        font-size: 10px;
+    }
+    .signUpRedirect{
+        font-size:10px ;
+    }
+    .signUpPage{
+        box-sizing: border-box;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+}
+@media  screen and (max-width: 950px) {
+    .Picture{
+        width: 300px;
+    }
+    .SignUpForm{
+        margin: 0px;
+    }
+    .SignUpForm input{
+        font-size: 10px;
+    }
+    .welcomeHeading{
+        font-size: 15px;
+    }
+    .enterDetails{
+        font-size: 10px;
+    }
+    .signUpRedirect{
+        font-size:10px ;
+    }
+    .signUpPage{
+        box-sizing: border-box;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+}
+@media  screen and (max-width: 750px) {
+    .Picture{
+        width: 200px;
+    }
+    .SignUpForm{
+        margin: 0px;
+    }
+    .SignUpForm input{
+        font-size: 10px;
+    }
+    .welcomeHeading{
+        font-size: 15px;
+    }
+    .enterDetails{
+        font-size: 10px;
+    }
+    .signUpRedirect{
+        font-size:10px ;
+    }
+    .signUpPage{
+        box-sizing: border-box;
+        justify-content: space-evenly;
+        height: fit-content;
+        padding: 0px;
+    }
+    .signUpPage .signUpRedirect{
+        margin-top: 25px;
+    }
+}
+@media  screen and (max-width: 630px)
+{
+    .loginPage,
+    .signUpPage{
+        width: 200px;
+    }
+    .loginPage input{
+        font-size: 10px ;
+    }
+} 
+@media  screen and (max-width: 530px)
+{
+    .Picture{
+        display: none;
+    }
+    body{
+        display: flex;
+        height: 100vh;
+        flex-direction: row;
+        align-items: center;
+        padding: 5vh;
+    }
+    .wrapper{
+        width: 90vw;
+        height: fit-content;
+    }
+    .signUpPage,.loginPage{
+        width: 100%;
+        height: max-content;
+    }
+    .signUpPage .signUpRedirect{
+        margin-top: 35px;
+        margin-bottom: 5px;
+    }
+    .loginPage .signUpRedirect{
+        margin-top: -35px;
+    }
+}
