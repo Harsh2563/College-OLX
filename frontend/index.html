@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="src/assets/Login_img.webp" alt="Picture" class="Picture">
+        <div class="loginPage">
+            <img src="src/assets/Google_logo.webp" alt="logo" id="logo">
+            <h1 class="welcomeHeading">Welcome Back!</h1>
+            <h2 class="enterDetails">Please enter your details</h2>
+            <form action="" class="loginForm">
+                <input type="email" class="loginEmail" placeholder="Email">
+                <input type="password" class="loginPassword" placeholder="Password">
+                <button class="loginButton" action="submit">Login</button>
+                <button class="GoogleLogin">
+                    <img src="src/assets/Google_logo.webp" alt="Google Logo" class="googleLogo">
+                    Log in with Google
+                </button>
+            </form>
+            <h3 class="signUpRedirect">Don't have an account? <a href="" class="signUpBtn">Sign Up</a></h3>
+        </div>
+        <div class="signUpPage">
+            <img src="src/assets/Google_logo.webp" alt="logo" id="logo">
+            <h1 class="welcomeHeading">Sign Up</h1>
+            <h2 class="enterDetails">Create your account</h2>
+            <form action="" class="SignUpForm">
+                <input type="text" class="username" placeholder="Full Name">
+                <input type="email" class="SignUpEmail" placeholder="Email">
+                <input type="password" class="SignUpPassword" placeholder="Password">
+                <button class="SignUpButton" action="submit">SignUp</button>
+                <button class="GoogleSignUp">
+                    <img src="src/assets/Google_logo.webp" alt="Google Logo" class="googleLogo">
+                    Sign Up with Google
+                </button>
+            </form>
+            <h3 class="signUpRedirect">Have an account? <a href="" class="LoginBtn">Log In</a></h3>
+        </div>
+    </div>
+</body>
+<script>
+    const LoginPage =document.querySelector(".loginPage");
+    const signUpPage=document.querySelector(".signUpPage");
+    const LoginBtn=document.querySelector(".LoginBtn");
+    const signUpBtn=document.querySelector(".signUpBtn");
+
+    LoginBtn.addEventListener("click",(event)=>{
+        event.preventDefault();
+        signUpPage.style.display="none";
+        LoginPage.style.display="flex";
+    })
+    signUpBtn.addEventListener("click",(event)=>{
+        event.preventDefault();
+        signUpPage.style.display="flex";
+        LoginPage.style.display="none";
+    })
+</script>
+</html>
