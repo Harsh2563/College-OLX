@@ -4,7 +4,6 @@ const usermodel = new mongoose.Schema ({
     username: {
         type: String,
         required:true,
-        unique:true,
     },
     email:{
         type: String,
@@ -21,7 +20,7 @@ const usermodel = new mongoose.Schema ({
     },
     phone: {
         type: Number,
-        unique:true,
+        default:null,
     },
     address: {
         type:String,
