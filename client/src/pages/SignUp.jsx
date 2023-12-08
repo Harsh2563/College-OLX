@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../components/Auth';
 import { useDispatch } from 'react-redux';
 import { signUpFailure, signUpStart, signUpSuccess } from '../redux/User/userslice';
@@ -8,6 +8,7 @@ import { signUpFailure, signUpStart, signUpSuccess } from '../redux/User/usersli
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -36,6 +37,7 @@ export default function SignUp() {
         return;
       }
       dispatch(signUpSuccess(data));
+      navigate("/")
     } catch (error) {
       dispatch(signUpFailure(error));
     }
