@@ -14,6 +14,7 @@ export default function SignUp() {
       ...formData,
       [e.target.id]: e.target.value,
     });
+    console.log(formData);
   };
 
   const handleSubmit = async (e) => {
@@ -67,7 +68,7 @@ export default function SignUp() {
               type="password"
               className="SignUpPassword"
               placeholder="Password"
-              name="password"
+              id="password"
               onChange={handleChange}
             />
             <button className="SignUpButton" type="submit">
