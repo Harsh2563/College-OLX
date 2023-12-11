@@ -1,34 +1,142 @@
-.profile-avatar{
-    height: 2rem;
-    border-radius: 100%;
-    padding: none !important;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@300&display=swap");
+
+:root {
+  --primary: #3e363f;
+  --bg-main: #fffad6;
+  --text-main: #eeeeee;
+  --secondary: #272d2d;
+  --tertiary: #f7dba7;
 }
-.carousel-item img{
-    height: 300px;
+* {
+  font-family: "Poppins", sans-serif;
 }
-.card-text{
-    font-size: 0.8rem;
+
+.navbar-brand,
+.SwapSquare {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.1rem;
 }
-.card-img-top{
-    aspect-ratio: 16/9;
+body {
+  background-color: var(--bg-main) !important;
 }
-ol li{
-    list-style: none;
+h2 {
+  font-weight: bolder !important;
 }
-.carousel-indicators [data-bs-target]{
-    background-color: rgb(255, 255, 255);
-    height: 0.5rem;
-    width: 0.5rem;
+.btn {
+  background-color: var(--primary);
+  color: var(--text-main);
+  border: none;
 }
-.testimonials-container{
-    padding:2px;
-    height: 20rem;
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.301);
+.btn:hover {
+  background-color: black;
+  color: var(--text-main);
+  border: none;
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.603);
 }
-a{
-    text-decoration: none;
+.navbar {
+  background-color: var(--primary) !important;
+}
+.profile-avatar {
+  height: 2rem;
+  border-radius: 100%;
+  padding: none !important;
+}
+.carousel-item img {
+  height: 300px;
+}
+.card-text {
+  font-size: 0.8rem;
+}
+.card-img-top {
+  aspect-ratio: 16/9;
+}
+ol li {
+  list-style: none;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: rgb(255, 255, 255);
+  height: 0.5rem;
+  width: 0.5rem;
+}
+.testimonials-container {
+  padding: 2px;
+  height: 20rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.301);
+}
+.testimonials-container .card {
+  margin-bottom: 3px;
+}
+a {
+  font-weight: bolder;
+  color: var(--bg-main);
+  text-decoration: none;
+}
+#allProductsSection {
+  background-color: var(--secondary);
+  color: var(--text-main);
+}
+#TestimonialsSection {
+  background-color: var(--tertiary);
+}
+::-webkit-scrollbar {
+  background-color: var(--bg-main);
+  width: 2px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10rem;
+}
+.SwapSquare {
+  font-size: 2rem;
+}
+#footerSection {
+  background-color: var(--secondary);
+  color: var(--text-main);
+}
+
+/* Shape Divider CSS */
+.custom-shape-divider-top-1702303162 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1702303162 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider-top-1702303162 .shape-fill {
+  fill: var(--bg-main) !important;
+  background-color: var(--bg-main);
+}
+
+.custom-shape-divider-bottom-1702303520 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1702303520 svg {
+  position: relative;
+  display: block;
+  width: calc(200% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1702303520 .shape-fill {
+  fill: var(--tertiary);
 }
