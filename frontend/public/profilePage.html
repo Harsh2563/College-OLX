@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile @SwapSquare</title>
+    <link rel="stylesheet" href="../src/styles/profilePage.css" />
+  </head>
+  <body>
+    <!-- Navbar Begins -->
+    <section class="nav">
+      <div class="logo">SwapSqaure</div>
+
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+      <ul class="menu">
+        <li>
+          <form>
+            <input type="text" class="searchBar" placeholder="Search Here" />
+          </form>
+        </li>
+        <li>Home</li>
+        <li>About</li>
+        <li>
+          <img
+            src="../src/assets/profileImg.jpeg"
+            class="profile-avatar"
+            alt=""
+          />
+        </li>
+      </ul>
+    </section>
+    <!-- NavBar Ends -->
+
+    <!-- Profile Section Starts -->
+    <section class="ProfileSection">
+        <br>
+        <h2>Profile</h2>
+        <br>
+        <div class="profileCard">
+            <img src="../src/assets/profileImg.jpeg" class="profileImg" alt="">
+            <form>
+                <input type="text" name="username" id="" placeholder="Username" autocomplete="off">
+                <input type="email" name="useremail" id="" placeholder="Email" autocomplete="off">
+                <input type="password" name="userpassword" id="" placeholder="Password" autocomplete="off">
+            </form>
+            <button type="submit">UPDATE</button>
+            <button>CREATE LISTING</button>
+            <div class="actionButtons">
+                <a href="">Delete Account</a> |
+                <a href="">Sign Out</a> |
+                <a href="">Show Listings</a>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
