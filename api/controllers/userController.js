@@ -22,12 +22,12 @@ export const updateUser = async(req,res,next)=> {
         const {password,...rest} = updatedUser._doc;
         res.status(200).json(rest);
     } catch (error) {
-        nect(error);
+        next(error);
     }
 }
 
 export const deleteUser = async(req,res,next)=> {;
-    if(req.user.id !==req.user.params) {
+    if(req.user.id !==req.params.id) {
         next(errorHandler(401,"You can delete only your own account"));
     }
     try {
